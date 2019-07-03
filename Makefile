@@ -9,8 +9,8 @@ CO = g++ -c $(FLG)
 
 ## TARGETS
 
-all: ftest.cc complex.o
-	$(CC) ftest.cc complex.o -o ftest 
+all: fourier.cc complex.o
+	$(CC) fourier.cc complex.o -o fvis
 
 complex.o: complex.h complex.c
 	g++ complex.c -c $(OP) -o complex.o
