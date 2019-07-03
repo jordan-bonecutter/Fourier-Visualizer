@@ -52,7 +52,7 @@ int main(const int argc, const char **argv)
 	}
 
 	/* Read in the path using the read_path function */
-	path = read_path("petr.ppm", &n, &m);
+	path = read_path(argv[1], &n, &m);
 	if(!(m%2))
 	{
 		m--;
@@ -63,7 +63,7 @@ int main(const int argc, const char **argv)
 	tmp  = (comp*)malloc(sizeof(comp)*m);
 	
 	/* Structure for writing to a video file */
-	writer = cv::VideoWriter("rough.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+	writer = cv::VideoWriter(argv[2], cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
 			60, cv::Size(2000, 2000), true);
 
 	/* Take the forward dft of our data */
