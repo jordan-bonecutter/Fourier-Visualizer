@@ -36,11 +36,10 @@ int main(const int argc, const char **argv)
 {
 	/* Local Variables */
 	int n, m, i, j;
-	double t, s, r, ss;
-	comp ctr, cprev;
+	double t, s;
+	comp ctr;
 	comp* path;
 	comp* circ;
-	gray_t out[ROWS][COLS];
 	cv::VideoWriter writer;
 	cv::Mat frame;
 	comp* tmp;
